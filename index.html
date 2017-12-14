@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tamil Radios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <link rel="stylesheet" href="https://rawgit.com/r4fx/mate/master/dist/assets/styles/mate.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="css/mep-feature-playlist.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelement-and-player.min.js"></script>
+    <script src="css/mep-feature-playlist.js"></script>
+</head>
+
+<body>
+    <main class="box margin-bottom--x2">
+        <h1>Tamil Radios</h1>
+
+
+        <section>
+            
+            <audio class="mediaElementPlaylist" data-showplaylist="true" preload="none" controls>
+                <source src="http://212.83.138.48:8328/;" type="audio/mp3" title="ARR Radio">
+                <source src="http://212.83.138.48:8324/;" type="audio/mp3" title="Ilayaraja Radio">
+                <source src="http://212.83.138.48:8336/;" type="audio/mp3" title="Tamil Top-40 Radio">
+                <source src="http://prclive1.listenon.in:9948/" type="audio/mp3" title="Planet Radio City">
+                <source src="http://17333.live.streamtheworld.com/RADIO_TAMIL_EST_128.mp3" type="audio/mp3" title="8K Radio">
+                <source src="http://212.83.138.48:8348/;" type="audio/mp3" title="Tamil Lite Radio">
+                <source src="http://212.83.138.48:8360/;" type="audio/mp3" title="Yuvan Radio">
+                <source src="http://212.83.138.48:8352/;" type="audio/mp3" title="Harris Jayaraj Radio">
+                <source src="http://www.puradsifm.net:9994/" type="audio/mp3" title="Puradsi FM">
+                <source src="http://media2.lankasri.fm/;" type="audio/mp3" title="Lankasri FM">
+                <source src="http://streaming.shoutcast.com/Kalasamcom?lang=en-US%2cen%3bq%3d0.8" type="audio/mp3" title="Kalasam FM">
+            </audio>
+        </section>
+    </main>
+
+
+
+    <script>
+        if ($.fn.mediaelementplayer) {
+            $('audio.mediaElementPlaylist').mediaelementplayer({
+                audioWidth: '100%',
+                alwaysShowControls: true,
+                error: function (media, node) {
+                    $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
+                },
+                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'playlist', 'current', 'progress', 'duration', 'volume']
+            });
+
+
+        }
+    </script>
+</body>
+
+</html>
