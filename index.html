@@ -59,14 +59,12 @@
             $('audio.mediaElementPlaylist').mediaelementplayer({
                 audioWidth: '100%',
                 alwaysShowControls: true,
-                castIsLive : true,
+                castIsLive: true,
                 error: function (media, node) {
                     $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
                 },
                 features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'playlist', 'current', 'progress', 'duration', 'volume', 'chromecast']
             });
-
-
         }
     </script>
 </body>
