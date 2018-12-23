@@ -8,20 +8,20 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="https://rawgit.com/r4fx/mate/master/dist/assets/styles/mate.min.css">
-    <link rel="stylesheet" href="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelementplayer.min.css">
-    <link rel="stylesheet" href="https://rawgit.com/r4fx/mediaelement-playlist/master/src/styles/css/mep-feature-playlist.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/chromecast/chromecast.css">
+    <link rel="stylesheet" href="https://rawgit.com/r4fx/mate/master/dist/assets/styles/mate.min.css" async defer>
+    <link rel="stylesheet" href="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelementplayer.min.css" async>
+    <link rel="stylesheet" href="https://rawgit.com/r4fx/mediaelement-playlist/master/src/styles/css/mep-feature-playlist.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/chromecast/chromecast.css" async>
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-    <script src="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelement-and-player.min.js"></script>
-    <script src="js/mep-feature-playlist.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/chromecast/chromecast.js"></script>
+    <script defer src="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelement-and-player.min.js"></script>
+    <script defer src="js/mep-feature-playlist.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/chromecast/chromecast.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116311106-1"></script>
-    <script>
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=UA-116311106-1"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
@@ -69,17 +69,19 @@
     </footer>
 
     <script>
-        if ($.fn.mediaelementplayer) {
-            $('audio.mediaElementPlaylist').mediaelementplayer({
-                audioWidth: '100%',
-                alwaysShowControls: true,
-                castIsLive: true,
-                error: function (media, node) {
-                    $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
-                },
-                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'playlist', 'current', 'progress', 'duration', 'volume', 'chromecast']
-            });
-        }
+        window.onload = function () { 
+            if ($.fn.mediaelementplayer) {
+                $('audio.mediaElementPlaylist').mediaelementplayer({
+                    audioWidth: '100%',
+                    alwaysShowControls: true,
+                    castIsLive: true,
+                    error: function (media, node) {
+                        $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
+                    },
+                    features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'playlist', 'current', 'progress', 'duration', 'volume', 'chromecast']
+                });
+            }
+        };
     </script>
 </body>
 
