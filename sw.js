@@ -4,12 +4,12 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-        `/`,
-        `/index.html`,
-        `/hindi.html`,
-        `/telugu.html`,
-        `/js/mep-feature-playlist.js`,
-        `/styles/styles.css`,
+        '/',
+        '/index.html',
+        '/hindi.html',
+        '/telugu.html',
+        '/js/mep-feature-playlist.js',
+        '/css/styles.css',
       ])
           .then(() => self.skipWaiting());
     })
