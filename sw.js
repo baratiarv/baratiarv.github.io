@@ -21,6 +21,9 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  if ( event.request.url.indexOf( 'http:' ) !== -1 ) {
+    return false;
+  }
   event.respondWith(
     caches.open(cacheName)
       .then(cache => cache.match(event.request, {ignoreSearch: true}))
