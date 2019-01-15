@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Telugu Radios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
+    <meta name="theme-color" content="#00897b" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://rawgit.com/r4fx/mate/master/dist/assets/styles/mate.min.css" async defer>
     <link rel="stylesheet" href="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelementplayer.min.css"
@@ -16,7 +16,8 @@
         async>
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script defer src="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelement-and-player.min.js"></script>
     <script defer src="js/mep-feature-playlist.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/chromecast/chromecast.js"></script>
@@ -32,13 +33,23 @@
 
 <body>
     <main class="box">
-        <h1>Telugu Radios</h1>
+        <nav style="text-align: center; padding:10px">
+            <a href="/">Tamil</a> |
+            <a href="/hindi">Hindi</a> |
+            <span>Telugu</span>
+        </nav>
         <section>
             <audio class="mediaElementPlaylist" data-showplaylist="true" preload="none" controls data-cast-title="Telugu Radios"
                 data-cast-description="Telugu Radios" data-cast-poster="https://dl.dropboxusercontent.com/s/pkblbflwwmfla5a/music.jpg?dl=0">
-                <source src="http://63.143.36.2:8888/;" type="audio/mp3" title="Radio City - Telugu Gold">
+                <source src="http://63.143.36.2:8888/telugu?icy=http" type="audio/mp3" title="Radio City - Telugu">
+                <source src="http://63.143.36.2:8888/TeluguGold?icy=http" type="audio/mp3" title="Radio City - Telugu Gold">
                 <source src="http://108.59.9.147:8160/;" type="audio/mp3" title="Shaivam.org Shaiva Lahari">
                 <source src="http://173.203.133.187:9700/;" type="audio/mp3" title="TORi-Live-8000">
+                <source src="http://63.143.36.2:8888/Bhakti?icy=http" type="audio/mp3" title="Radio City - Bhakti Radio">
+                <source src="http://52.3.202.102:8000/stream?icy=http" type="audio/mp3" title="MYINDMEDIA - THE VOICE OF INDIA - HYDERABAD">
+                <source src="http://52.3.202.102:8002/stream?icy=http" type="audio/mp3" title="MyindMedia - The Voice of India - Vijayawada">
+                <source src="http://64.150.176.42:8166/stream/1/" type="audio/mp3" title="Radio9 Telugu">
+                <source src="http://173.203.133.187:9700/stream/1/" type="audio/mp3" title="Telugu One">
             </audio>
         </section>
     </main>
