@@ -279,15 +279,15 @@
 			if ('mediaSession' in navigator) {
 				navigator.mediaSession.metadata = new MediaMetadata({
 					title: track.text(),
-					artist: 'Bharathi Velusamy',
+					artist: 'Desi Radios',
 					album: track.text(),
 					artwork: [
-						{ src: 'https://dummyimage.com/96/ff6f00/ffffff&text=Tamil+Radios', sizes: '96x96', type: 'image/png' },
-						{ src: 'https://dummyimage.com/128/ff6f00/ffffff&text=Tamil+Radios', sizes: '128x128', type: 'image/png' },
-						{ src: 'https://dummyimage.com/192/ff6f00/ffffff&text=Tamil+Radios', sizes: '192x192', type: 'image/png' },
-						{ src: 'https://dummyimage.com/256/ff6f00/ffffff&text=Tamil+Radios', sizes: '256x256', type: 'image/png' },
-						{ src: 'https://dummyimage.com/384/ff6f00/ffffff&text=Tamil+Radios', sizes: '384x384', type: 'image/png' },
-						{ src: 'https://dummyimage.com/512/ff6f00/ffffff&text=Tamil+Radios', sizes: '512x512', type: 'image/png' },
+						{ src: 'https://dummyimage.com/96/ff6f00/ffffff&text=Desi+Radios', sizes: '96x96', type: 'image/png' },
+						{ src: 'https://dummyimage.com/128/ff6f00/ffffff&text=Desi+Radios', sizes: '128x128', type: 'image/png' },
+						{ src: 'https://dummyimage.com/192/ff6f00/ffffff&text=Desi+Radios', sizes: '192x192', type: 'image/png' },
+						{ src: 'https://dummyimage.com/256/ff6f00/ffffff&text=Desi+Radios', sizes: '256x256', type: 'image/png' },
+						{ src: 'https://dummyimage.com/384/ff6f00/ffffff&text=Desi+Radios', sizes: '384x384', type: 'image/png' },
+						{ src: 'https://dummyimage.com/512/ff6f00/ffffff&text=Desi+Radios', sizes: '512x512', type: 'image/png' },
 					]
 				});
 			}
